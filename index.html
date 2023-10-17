@@ -8,12 +8,8 @@
     <meta name="description" content="Shopping Layout">
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=quicksand:300,400,500,600,700" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,7 +18,7 @@
             <section>
                 <figure class="figure">
                     <img class="article-image" src="pictures/Asics.png" title="Asics" alt="Blaue Schuhe von Asics">
-                    <figcaption class="image-author">Photo by: Daniel Storek</figcaption>
+                    <figcaption class="image-author">Photo by: Maksim Larin</figcaption>
                 </figure>
                 <aside class="product-highlight">Free Shipping!</aside>
             </section>
@@ -36,12 +32,25 @@
                     ea
                     rebum. </p>
             </section>
-            <section>
-                <h2>$65 USD</h2>
-                <p>Size</p>
-                <p>Quantity</p>
-                <p>Color</p>
-            </section>
+            <form class="buy-section">
+                <h2 class="price">$65 USD</h2>
+                <label class="size" for="size">Size:</label>
+                <select class="size-selector" id="size" name="size">
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <label class="quantitiy" for="quantity">Quantity:</label>
+                <select class="quantity-selector" id="quantity" name="quantitiy">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <p class="color">Color:</p>
+                <button class="button">Add to Cart</button>
+            </form>
         </article>
         <article class="main-article">
             <section>
@@ -60,11 +69,12 @@
                     et ea
                     rebum. </p>
             </section>
-            <section>
-                <h2>$30 USD</h2>
-                <p>Size</p>
-                <p>Quantity</p>
-                <p>Color</p>
+            <section class="buy-section">
+                <h2 class="price">$30 USD</h2>
+                <p class="size">Size </p>
+                <p class="quantity">Quantity</p>
+                <p class="color">Color</p>
+                <button class="button">Add to Cart</button>
             </section>
         </article>
         <article class="main-article">
@@ -72,7 +82,7 @@
                 <figure class="figure">
                     <img class="article-image" src="pictures/New_Balance.png" title="New Balance"
                         alt="Khaki Schuhe von New Balance">
-                    <figcaption class="image-author">Photo by: Daniel Storek</figcaption>
+                    <figcaption class="image-author">Photo by: felipepelaquim</figcaption>
                 </figure>
                 <aside class="product-highlight">Just One Left!</aside>
             </section>
@@ -86,11 +96,12 @@
                     ea
                     rebum.</p>
             </section>
-            <section>
-                <h2>$45 USD</h2>
-                <p>Size</p>
-                <p>Quantity</p>
-                <p>Color</p>
+            <section class="buy-section">
+                <h2 class="price">$45 USD</h2>
+                <p class="size">Size</p>
+                <p class="quantity">Quantity</p>
+                <p class="color">Color</p>
+                <button class="button">Add to Cart</button>
             </section>
         </article>
 
