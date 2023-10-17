@@ -75,8 +75,8 @@ p {
 
 .image-author {
   position: absolute;
-  bottom: 0.3rem;
-  left: 0rem;
+  bottom: 0;
+  left: 0;
   font-size: 0.7rem;
   width: 100%;
   color: var(--color-text);
