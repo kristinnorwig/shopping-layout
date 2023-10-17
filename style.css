@@ -1,0 +1,82 @@
+/* universal selectors*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* tag selectors*/
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* class selectors*/
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  margin: 50px;
+}
+
+.article-image {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.figure {
+  margin: 0;
+  position: relative;
+}
+
+.image-author {
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+  font-size: 0.7rem;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.782);
+  padding: 0.5rem;
+}
+
+.product-highlight {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  background-color: rgba(255, 255, 255, 0.782);
+  padding: 0.5rem 0.5rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.main-article {
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-caption {
+  color: grey;
+}
