@@ -10,6 +10,10 @@
   --color-text: grey;
   --color-article-bg: white;
   --color-button: #485fb9;
+  --color-gradient-1: rgba(255, 255, 255, 0.8);
+  --color-gradient-2: rgba(230, 230, 230, 0);
+  --color-green: green;
+  --color-red: rgb(200, 51, 51);
 }
 
 html {
@@ -34,6 +38,8 @@ h6 {
   font-weight: 600;
 }
 
+/* Frage: H1 eigentlich nur einmal benutzen, dann mit h2 beginnen??? */
+
 h1,
 h2,
 p {
@@ -50,7 +56,7 @@ p {
 }
 
 .main-article {
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.234);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.067);
   border-radius: 1rem;
   background-color: var(--color-article-bg);
 }
@@ -69,19 +75,26 @@ p {
 
 .image-author {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0.3rem;
   left: 0rem;
   font-size: 0.7rem;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.782);
-  padding: 0.5rem;
+  color: var(--color-text);
+  background-image: linear-gradient(
+    to top,
+    var(--color-gradient-1),
+    var(--color-gradient-2)
+  );
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
 }
 
 .product-highlight {
   position: absolute;
-  right: 3rem;
-  top: 3rem;
-  background-color: rgba(255, 255, 255, 0.782);
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--color-gradient-1);
   padding: 0.5rem 0.5rem;
   margin: 0;
   border-radius: 0.5rem;
@@ -90,7 +103,8 @@ p {
 }
 
 .product-info {
-  padding: 2rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
 }
 
 .product-caption {
@@ -106,7 +120,7 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "price price price price"
-    "size size-selector quantity quantity-selector"
+    "size size-select quantity quantity-select"
     "color color color color"
     "button button button button";
   gap: 1rem;
@@ -124,24 +138,93 @@ p {
   grid-area: size;
 }
 
-.size-selector {
-  grid-area: size-selector;
+.size-select {
+  grid-area: size-select;
 }
 
 .quantity {
   grid-area: quantity;
 }
 
-.quantity-selector {
-  grid-area: quantity-selector;
+.quantity-select {
+  grid-area: quantity-select;
+}
+
+.color-section {
+  grid-area: color;
+  display: flex;
 }
 
 .color {
-  grid-area: color;
+  margin-right: 1rem;
 }
 
-.quantity-selector,
-.size-selector {
+.color-select-1,
+.color-select-2,
+.color-select-3,
+.color-select-4,
+.color-select-5,
+.color-select-6,
+.color-select-7,
+.color-select-8 {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background-color: var(--color-button);
+  border: none;
+  margin-right: 1rem;
+}
+
+.color-select-2 {
+  background-color: var(--color-red);
+}
+
+.color-select-3 {
+  background-color: var(--color-main);
+}
+
+.color-select-4 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-green) 0.75rem,
+    var(--color-main) 0.75rem
+  );
+}
+
+.color-select-5 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-button) 0.75rem,
+    var(--color-main) 0.75rem
+  );
+}
+
+.color-select-6 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-red) 0.75rem,
+    var(--color-main) 0.75rem
+  );
+}
+
+.color-select-7 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-red) 0.75rem,
+    var(--color-article-bg) 0.75rem
+  );
+}
+
+.color-select-8 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-main) 0.75rem,
+    var(--color-article-bg) 0.75rem
+  );
+}
+
+.quantity-select,
+.size-select {
   border: none;
   background-color: var(--color-article-bg);
   border-radius: 0.25rem;
@@ -153,5 +236,11 @@ p {
   border-radius: 0.5rem;
   padding: 0.5rem;
   grid-area: button;
-  border: none;
+  border: 0.09rem solid var(--color-button);
+}
+
+.button:hover {
+  background-color: var(--color-article-bg);
+  color: var(--color-button);
+  border: 0.09rem solid var(--color-button);
 }
